@@ -1,15 +1,15 @@
-import { Route, Routes } from "react-router-dom";
-import ColorCodes from "./pages/ColorCodes";
-import { Toaster } from "./components/ui/toaster";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PaymentPage from "./pages/PaymentPage";
+import { Toaster } from "./components/Toaster";
 
 function App() {
   return (
-    <div className="min-h-screen bg-background">
-      <Routes>
-        <Route path="/" element={<ColorCodes />} />
-      </Routes>
+    <BrowserRouter>
       <Toaster />
-    </div>
+      <Routes>
+        <Route path="/" element={<PaymentPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
